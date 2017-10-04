@@ -1,5 +1,3 @@
-# companame
-
 ```
 $ pip install -r requirements.txt
 
