@@ -40,7 +40,8 @@ def google_count(text):
         print('Captcha by Google')
         return
 
-    if content.find('<span class="spell_orig">') != -1:
+    if content.find('<span class="spell_orig">') != -1 or \
+            content.find(' <b>"' + text + '"</b>.') != -1:
         print('No results found')
         return
     
