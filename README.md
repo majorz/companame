@@ -1,7 +1,10 @@
+Install python dependecies:
 ```
 $ pip install -r requirements.txt
+```
 
-# Generate 4-letter names starting with `r` and ending with `o`
+Generate 4-letter names starting with `r` and ending with `o`
+```
 $ ./gen.py -s r -e o -c 4
 raco
 ralo
@@ -24,8 +27,10 @@ rolo
 romo
 rono
 roto
+```
 
-# Check DNS records and Google search results count
+Check DNS records and Google search results count
+```
 $ ./check.py < check.txt
 =============================
    google
