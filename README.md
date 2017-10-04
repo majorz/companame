@@ -1,4 +1,4 @@
-Install python dependecies:
+Install python dependencies:
 ```
 $ pip install -r requirements.txt
 ```
@@ -39,6 +39,12 @@ $ ./check.py < check.txt
 google.com. 299 IN A 216.58.206.174
 :: google.io
 google.io. 299 IN A 172.217.17.196
+:: google os
+497000 results
+:: google application
+228000 results
+:: google server
+450000 results
 ...
 ```
 
