@@ -2,13 +2,12 @@
 
 # pylint: disable=C0111, R0911
 
+import argparse
 from itertools import product
 from string import ascii_lowercase
 
 CONSONANTS = 'bcdfghklmnprstvx'
 VOWELS = 'aeiou'
-
-N = 5
 
 def pair(first, second):
     bad = {
@@ -42,7 +41,7 @@ def pair(first, second):
     return True
 
 
-def start(first, second):
+def start_valid(first, second):
     bad = {
         'a': 'bcdfgitv',
         'b': 'eiols',
@@ -72,7 +71,7 @@ def start(first, second):
     return True
 
 
-def last(first, second):
+def end_valid(first, second):
     if first + second in [
             'ad',
             'ag',
@@ -167,17 +166,17 @@ def valid(chars):
     if chars[-1] in 'bcfiptvy':
         return False
 
-    if not start(chars[0], chars[1]):
+    if not start_valid(chars[0], chars[1]):
         return False
 
-    if not last(chars[-2], chars[-1]):
+    if not end_valid(chars[-2], chars[-1]):
         return False
 
-    for j in range(0, N-2):
+    for j in range(0, len(chars) - 2):
         if not triple(chars[j], chars[j+1], chars[j+2]):
             return False
 
-    for j in range(0, N-1):
+    for j in range(0, len(chars) - 1):
         if not pair(chars[j], chars[j+1]):
             return False
 
@@ -185,10 +184,25 @@ def valid(chars):
 
 
 def main():
-    for chars in product(ascii_lowercase, repeat=N):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', type=int, default=5, help='character count (default: 5)')
+    parser.add_argument('-s', type=str, default='', help='start sequence')
+    parser.add_argument('-e', type=str, default='', help='end sequence')
+    args = parser.parse_args()
+
+    start = args.s
+    end = args.e
+    delta = args.c - len(start) - len(end)
+
+    if delta < 0:
+        print('Character count exceeds start and end sequence sum')
+        exit(1)
+
+    for delta_chars in product(ascii_lowercase, repeat=delta):
+        chars = start + ''.join(delta_chars) + end
         if not valid(chars):
             continue
-        print(''.join(chars))
+        print(chars)
 
 if __name__ == '__main__':
     main()
