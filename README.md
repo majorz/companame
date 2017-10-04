@@ -36,7 +36,7 @@ $ ./check.py < check.txt
 google.com. 299 IN A 216.58.206.174
 :: google.io
 google.io. 299 IN A 172.217.17.196
-
+...
 ```
 
 ```
