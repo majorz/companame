@@ -155,7 +155,7 @@ type Map = BTreeMap<u8, BTreeSet<u8>>;
 
 
 fn main() {
-    gen_tables();
+    //gen_tables();
 
     let config = get_config();
 
