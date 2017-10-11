@@ -5,21 +5,6 @@ use std::collections::{BTreeMap, BTreeSet};
 
 use clap::{Arg, App};
 
-macro_rules! btreemap {
-    // trailing comma case
-    ($($key:expr => $value:expr,)+) => (btreemap!($($key => $value),+));
-    
-    ( $($key:expr => $value:expr),* ) => {
-        {
-            let mut _map = ::std::collections::BTreeMap::new();
-            $(
-                _map.insert($key, $value);
-            )*
-            _map
-        }
-    };
-}
-
 struct Config {
     count: usize,
     delta: usize,
@@ -155,13 +140,12 @@ type Map = BTreeMap<u8, BTreeSet<u8>>;
 
 
 fn main() {
-    //gen_tables();
+    let (start, end, middle) = gen_tables();
 
     let config = get_config();
 
-
     for word in LIKEY.iter() {
-        if !valid(&word) {
+        if !valid(&word, &start, &end, &middle) {
             let word = unsafe { from_utf8_unchecked(&word) };
 
             panic!("!likey {}", word);
@@ -176,7 +160,7 @@ fn main() {
         word.extend(chars);
         word.extend(&config.end);
 
-        if !valid(&word) {
+        if !valid(&word, &start, &end, &middle) {
             continue;
         }
 
@@ -200,25 +184,24 @@ fn init_map() -> Map {
     map
 }
 
-fn gen_tables() {
-    let mut start_map = init_map();
-    let mut end_map = init_map();
-    let mut middle_map = init_map();
+fn gen_tables() -> (Map, Map, Map) {
+    let mut start = init_map();
+    let mut end = init_map();
+    let mut middle = init_map();
 
     for word in LIKEY.iter() {
         let len = word.len();
         
-        start_map.get_mut(&(word[0])).unwrap().insert(word[1]);
+        start.get_mut(&(word[0])).unwrap().insert(word[1]);
 
-        end_map.get_mut(&(word[len-2])).unwrap().insert(word[len-1]);
+        end.get_mut(&(word[len-2])).unwrap().insert(word[len-1]);
 
         for i in 0..len - 3 {
-            middle_map.get_mut(&(word[i+1])).unwrap().insert(word[i+2]);
+            middle.get_mut(&(word[i+1])).unwrap().insert(word[i+2]);
         }
     }
 
-    print_table(end_map);
-    
+    (start, end, middle)
 }
 
 fn print_table(map: Map) {
@@ -233,98 +216,6 @@ fn print_table(map: Map) {
 
         println!("\",");
     }
-}
-
-fn start_valid(first: u8, second: u8) -> bool {
-    let good = btreemap!{
-        b'a' => b"cilnprtv" as &[u8],
-        b'b' => b"aeilr",
-        b'c' => b"aehlo",
-        b'd' => b"aeiry",
-        b'e' => b"adlntx",
-        b'f' => b"aeilor",
-        b'g' => b"er",
-        b'h' => b"",
-        b'i' => b"m",
-        b'k' => b"i",
-        b'l' => b"aeiou",
-        b'm' => b"aeio",
-        b'n' => b"eiy",
-        b'o' => b"",
-        b'p' => b"aehiru",
-        b'r' => b"aeu",
-        b's' => b"acehint",
-        b't' => b"ahr",
-        b'u' => b"",
-        b'v' => b"ao",
-        b'x' => b"e",
-        b'y' => b"",
-        b'z' => b"",
-    };
-
-    good.get(&first).unwrap().contains(&second)
-}
-
-
-fn end_valid(first: u8, second: u8) -> bool {
-    let good = btreemap!{
-        b'a' => b"cknpxy" as &[u8],
-        b'b' => b"",
-        b'c' => b"ehkot",
-        b'd' => b"ey",
-        b'e' => b"dlrtx",
-        b'f' => b"t",
-        b'g' => b"e",
-        b'h' => b"",
-        b'i' => b"dopx",
-        b'k' => b"eo",
-        b'l' => b"delt",
-        b'm' => b"eimp",
-        b'n' => b"deknt",
-        b'o' => b"gmnr",
-        b'p' => b"et",
-        b'r' => b"akmnoty",
-        b's' => b"ehkst",
-        b't' => b"e",
-        b'u' => b"s",
-        b'v' => b"eo",
-        b'x' => b"",
-        b'y' => b"x",
-        b'z' => b"",
-    };
-
-    good.get(&first).unwrap().contains(&second)
-}
-
-
-fn middle(first: u8, second: u8) -> bool {
-    let good = btreemap!{
-        b'a' => b"cdfklmnrstuvy" as &[u8],
-        b'b' => b"u",
-        b'c' => b"acekotu",
-        b'd' => b"egio",
-        b'e' => b"acdlmnoprs",
-        b'f' => b"",
-        b'g' => b"en",
-        b'h' => b"ai",
-        b'i' => b"acegklmnrstvx",
-        b'k' => b"o",
-        b'l' => b"aeips",
-        b'm' => b"p",
-        b'n' => b"acdet",
-        b'o' => b"cilnopr",
-        b'p' => b"aei",
-        b'r' => b"abcegimrv",
-        b's' => b"u",
-        b't' => b"aeioru",
-        b'u' => b"dls",
-        b'v' => b"o",
-        b'x' => b"eit",
-        b'y' => b"el",
-        b'z' => b"",
-    };
-
-    good.get(&first).unwrap().contains(&second)
 }
 
 fn triple(first: u8, second: u8, third: u8) -> bool {
@@ -350,7 +241,7 @@ fn triple(first: u8, second: u8, third: u8) -> bool {
     true
 }
 
-fn valid(word: &[u8]) -> bool {
+fn valid(word: &[u8], start: &Map, end: &Map, middle: &Map) -> bool {
     let count = word.len();
 
     for i in 0..count - 2 {
@@ -359,16 +250,16 @@ fn valid(word: &[u8]) -> bool {
         }
     }
 
-    if !start_valid(word[0], word[1]) {
+    if !start.get(&word[0]).unwrap().contains(&word[1]) {
         return false;
     }
 
-    if !end_valid(word[count-2], word[count-1]) {
+    if !end.get(&word[count-2]).unwrap().contains(&word[count-1]) {
         return false;
     }
 
     for i in 0..count - 3 {
-        if !middle(word[i+1], word[i+2]) {
+        if !middle.get(&word[i+1]).unwrap().contains(&word[i+2]) {
             return false;
         }
     }
