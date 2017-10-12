@@ -10,12 +10,15 @@ kid
 mid
 nid
 pid
+rid
 ace
 sce
 ble
 cle
 fle
+sle
 ape
+spe
 ste
 ack
 ark
@@ -28,6 +31,7 @@ arm
 con
 lon
 von
+arn
 bap
 cap
 fap
@@ -43,6 +47,7 @@ kip
 mip
 nip
 pip
+rip
 ber
 cer
 der
@@ -50,6 +55,7 @@ ner
 rer
 act
 cut
+hut
 bax
 cax
 fax
@@ -70,5 +76,6 @@ kix
 mix
 nix
 pix
+rix
 nyx
-Generated: 73
+Generated: 80

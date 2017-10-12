@@ -18,7 +18,7 @@ const CHARS: &[u8] = b"abcdefghiklmnoprstuvxyz";
 const CONSONANTS: &[u8] = b"bcdfghklmnprstvxz";
 const VOWELS: &[u8] = b"aeiou";
 
-const LIKEY: [&[u8]; 67] = [
+const LIKEY: [&[u8]; 73] = [
     b"mint" as &[u8],
     b"void",
     b"nyx",
@@ -41,6 +41,7 @@ const LIKEY: [&[u8]; 67] = [
     b"dice",
     b"nike",
     b"pike",
+    b"spike",
     b"red",
     b"clip",
     b"base",
@@ -63,12 +64,14 @@ const LIKEY: [&[u8]; 67] = [
     b"race",
     b"act",
     b"arm",
+    b"barn",
     b"void",
     b"back",
     b"bed",
     b"black",
     b"block",
     b"cap",
+    b"lap",
     b"case",
     b"cast",
     b"check",
@@ -76,15 +79,18 @@ const LIKEY: [&[u8]; 67] = [
     b"cost",
     b"cross",
     b"cut",
+    b"hut",
     b"kick",
     b"lock",
     b"nice",
+    b"rice",
     b"next",
     b"pack",
     b"pick",
     b"sake",
     b"shell",
     b"stick",
+    b"slick",
     b"vote",
 ];
 

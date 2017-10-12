@@ -4,7 +4,9 @@ shed
 bled
 cled
 fled
+sled
 aped
+sped
 nyed
 chid
 phid
@@ -12,9 +14,12 @@ shid
 blid
 clid
 flid
+slid
 coid
 loid
 void
+apid
+spid
 arid
 brid
 crid
@@ -32,6 +37,7 @@ kild
 mild
 nild
 pild
+rild
 cold
 lold
 vold
@@ -55,6 +61,7 @@ kice
 mice
 nice
 pice
+rice
 coce
 loce
 voce
@@ -81,6 +88,7 @@ kike
 mike
 nike
 pike
+rike
 bele
 cele
 dele
@@ -93,6 +101,7 @@ kile
 mile
 nile
 pile
+rile
 cole
 lole
 vole
@@ -122,6 +131,7 @@ kise
 mise
 nise
 pise
+rise
 cose
 lose
 vose
@@ -132,6 +142,7 @@ kite
 mite
 nite
 pite
+rite
 cote
 lote
 vote
@@ -155,6 +166,7 @@ kick
 mick
 nick
 pick
+rick
 cock
 lock
 vock
@@ -181,6 +193,7 @@ kisk
 misk
 nisk
 pisk
+risk
 cosk
 losk
 vosk
@@ -190,7 +203,9 @@ shel
 blel
 clel
 flel
+slel
 apel
+spel
 nyel
 bell
 cell
@@ -204,6 +219,7 @@ kill
 mill
 nill
 pill
+rill
 coll
 loll
 voll
@@ -220,10 +236,19 @@ scon
 blon
 clon
 flon
+slon
 aron
 bron
 cron
 fron
+barn
+carn
+farn
+larn
+marn
+parn
+rarn
+sarn
 beap
 ceap
 deap
@@ -235,6 +260,7 @@ shap
 blap
 clap
 flap
+slap
 snap
 arap
 brap
@@ -246,9 +272,12 @@ ship
 blip
 clip
 flip
+slip
 coip
 loip
 voip
+apip
+spip
 arip
 brip
 crip
@@ -260,7 +289,9 @@ sher
 bler
 cler
 fler
+sler
 aper
+sper
 nyer
 bass
 cass
@@ -277,6 +308,7 @@ kiss
 miss
 niss
 piss
+riss
 coss
 loss
 voss
@@ -300,6 +332,7 @@ kict
 mict
 nict
 pict
+rict
 coct
 loct
 voct
@@ -315,6 +348,7 @@ kilt
 milt
 nilt
 pilt
+rilt
 colt
 lolt
 volt
@@ -325,6 +359,7 @@ kint
 mint
 nint
 pint
+rint
 bast
 cast
 fast
@@ -340,6 +375,7 @@ kist
 mist
 nist
 pist
+rist
 cost
 lost
 vost
@@ -355,6 +391,7 @@ kixt
 mixt
 nixt
 pixt
+rixt
 beax
 ceax
 deax
@@ -366,6 +403,7 @@ shax
 blax
 clax
 flax
+slax
 snax
 arax
 brax
@@ -377,7 +415,9 @@ shex
 blex
 clex
 flex
+slex
 apex
+spex
 nyex
 chix
 phix
@@ -385,9 +425,12 @@ shix
 blix
 clix
 flix
+slix
 coix
 loix
 voix
+apix
+spix
 arix
 brix
 crix
@@ -406,4 +449,4 @@ ceyx
 deyx
 neyx
 reyx
-Generated: 408
+Generated: 451
