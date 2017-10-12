@@ -5,28 +5,13 @@ $ pip install -r requirements.txt
 
 Generate 4-letter names starting with `r` and ending with `o`
 ```
-$ ./gen.py -s r -e o -c 4
-raco
-ralo
-ramo
-rano
-rato
-reco
-relo
-remo
-reno
-reto
-reyo
-rico
-rilo
-rimo
-rino
-rito
-roco
-rolo
-romo
-rono
-roto
+$ cargo run --release -- -s n -e on -c 5
+necon
+nelon
+nicon
+nikon
+nilon
+Generated: 5
 ```
 
 Check DNS records and Google search results count
@@ -49,11 +34,18 @@ google.io. 299 IN A 172.217.17.196
 ```
 
 ```
-usage: gen.py [-h] [-c C] [-s S] [-e E]
+$ cargo run --release -- --help
+companame 0.1.0
 
-optional arguments:
-  -h, --help  show this help message and exit
-  -c C        character count (default: 5)
-  -s S        start sequence
-  -e E        end sequence
+USAGE:
+    companame [OPTIONS]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -c <count>        Character count [default: 3]
+    -e <end>          End sequence [default: ]
+    -s <start>        Start sequence [default: ]
 ```
