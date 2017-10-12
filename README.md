@@ -3,7 +3,7 @@ Install python dependencies:
 $ pip install -r requirements.txt
 ```
 
-Generate 4-letter names starting with `r` and ending with `o`
+Generate 5-letter names starting with `n` and ending with `on`
 ```
 $ cargo run --release -- -s n -e on -c 5
 necon
