@@ -93,6 +93,8 @@ def main():
 
         google_count(name + ' server')
 
+        print('')
+
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,154 @@
+=============================
+   criss
+-----------------------------
+:: criss.com
+criss.com. 299 IN A 64.99.80.121
+:: criss.io
+No DNS
+:: criss os
+827 results
+:: criss application
+55 results
+:: criss server
+157 results
+
+=============================
+   delon
+-----------------------------
+:: delon.com
+delon.com. 28799 IN A 112.127.8.126
+:: delon.io
+delon.io. 3599 IN A 213.186.33.5
+:: delon os
+1540 results
+:: delon application
+127 results
+:: delon server
+60 results
+lark
+
+=============================
+   lark
+-----------------------------
+:: lark.com
+lark.com. 299 IN A 54.144.187.30
+:: lark.io
+No nameservers
+:: lark os
+1370 results
+:: lark application
+1100 results
+:: lark server
+115 results
+
+=============================
+   mayer
+-----------------------------
+:: mayer.com
+mayer.com. 3599 IN A 205.178.132.182
+:: mayer.io
+mayer.io. 7199 IN A 85.13.131.182
+:: mayer os
+22600 results
+:: mayer application
+1110 results
+:: mayer server
+894 results
+
+=============================
+   nelix
+-----------------------------
+:: nelix.com
+nelix.com. 86399 IN A 104.130.146.118
+:: nelix.io
+No DNS
+:: nelix os
+No results found
+:: nelix application
+3 results
+:: nelix server
+No results found
+
+=============================
+   niss
+-----------------------------
+:: niss.com
+niss.com. 299 IN A 104.6.173.231
+:: niss.io
+No DNS
+:: niss os
+341 results
+:: niss application
+283 results
+:: niss server
+No results found
+
+=============================
+   nyer
+-----------------------------
+:: nyer.com
+nyer.com. 3599 IN A 23.23.174.132
+:: nyer.io
+No DNS
+:: nyer os
+137 results
+:: nyer application
+391 results
+:: nyer server
+430 results
+
+=============================
+   rax
+-----------------------------
+:: rax.com
+rax.com. 599 IN A 117.25.143.117
+:: rax.io
+rax.io. 299 IN A 10.14.208.163
+:: rax os
+1250 results
+:: rax application
+206 results
+:: rax server
+666 results
+
+=============================
+   rike
+-----------------------------
+:: rike.com
+rike.com. 14399 IN A 198.154.241.135
+:: rike.io
+No DNS
+:: rike os
+966 results
+:: rike application
+23 results
+:: rike server
+48 results
+
+=============================
+   slade
+-----------------------------
+:: slade.com
+slade.com. 1799 IN A 216.92.91.236
+:: slade.io
+slade.io. 599 IN A 50.63.202.58
+:: slade os
+1470 results
+:: slade application
+674 results
+:: slade server
+162 results
+
+=============================
+   slix
+-----------------------------
+:: slix.com
+slix.com. 14399 IN A 216.51.232.29
+:: slix.io
+slix.io. 299 IN A 45.55.114.209
+:: slix os
+No results found
+:: slix application
+No results found
+:: slix server
+17 results
