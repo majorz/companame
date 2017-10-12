@@ -6,6 +6,7 @@ red
 bid
 did
 fid
+gid
 kid
 mid
 nid
@@ -43,6 +44,7 @@ sap
 bip
 dip
 fip
+gip
 kip
 mip
 nip
@@ -54,6 +56,15 @@ der
 ner
 rer
 act
+bit
+dit
+fit
+git
+kit
+mit
+nit
+pit
+rit
 cut
 hut
 bax
@@ -72,10 +83,11 @@ rex
 bix
 dix
 fix
+gix
 kix
 mix
 nix
 pix
 rix
 nyx
-Generated: 80
+Generated: 92

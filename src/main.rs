@@ -18,10 +18,11 @@ const CHARS: &[u8] = b"abcdefghiklmnoprstuvxyz";
 const CONSONANTS: &[u8] = b"bcdfghklmnprstvxz";
 const VOWELS: &[u8] = b"aeiou";
 
-const LIKEY: [&[u8]; 73] = [
+const LIKEY: [&[u8]; 74] = [
     b"mint" as &[u8],
     b"void",
     b"nyx",
+    b"git",
     b"dell",
     b"pixel",
     b"flip",
