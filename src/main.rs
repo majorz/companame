@@ -263,7 +263,7 @@ impl<'a> Iterator for CharsProduct<'a> {
                 let mut product = Vec::with_capacity(self.repeat);
 
                 for j in 0..self.repeat {
-                    product.push(self.chars[self.indices[j]]);
+                    product.push(self.chars[self.indices[self.repeat - j - 1]]);
                 }
 
                 return Some(product);
